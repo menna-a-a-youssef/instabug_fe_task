@@ -1,9 +1,10 @@
 <div class="c-dashboard">
   <div class="c-filters__container">
-    [Place search component here]
+    <input hidden id="searchText" type="text" placeholder="Search" ng-model="searchText">
+    <v-search-filter />
   </div>
 
-  <employees-list employees-list="homePageVm.employees"></employees-list>
+  <employees-list employees-list="homePageVm.employees" search-text="searchText" ></employees-list>
 
   <div class="c-dashboard__footer">
     <button class="c-button">
